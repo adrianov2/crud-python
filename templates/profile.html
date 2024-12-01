@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f8;
+    color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Link de logout */
+p a {
+    font-size: 1.1rem;
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #c0392b;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<body>
+    <h1>Bem-vindo, {{ name }}!</h1>
+    <p><a href="{{ url_for('auth.logout') }}">Sair</a></p>
+</body>
+</html>
